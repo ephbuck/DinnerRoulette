@@ -1,0 +1,149 @@
+{
+	"type": "modal",
+	"title": {
+		"type": "plain_text",
+		"text": "Add Dinner Form",
+		"emoji": true
+	},
+	"submit": {
+		"type": "plain_text",
+		"text": "Submit",
+		"emoji": true
+	},
+	"close": {
+		"type": "plain_text",
+		"text": "Cancel",
+		"emoji": true
+	},
+	"blocks": [
+		{
+			"type": "input",
+			"block_id": "add_dinner_name",
+            "element": {
+				"type": "plain_text_input",
+				"action_id": "dinner_named",
+                "placeholder": {
+                    "type": "plain_text",
+                    "text": "Kimchi Sandwich"
+                    }
+			},
+			"label": {
+				"type": "plain_text",
+				"text": "Name Your Dinner!",
+				"emoji": true
+			}
+		},
+		{
+			"type": "divider"
+		},
+		{
+			"type": "section",
+			"block_id":"add_dinner_diff",
+			"text": {
+				"type": "mrkdwn",
+				"text": "Difficulty Rating:"
+			},
+			"accessory": {
+				"type": "radio_buttons",
+				"options": [
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "Easy",
+							"emoji": true
+						},
+						"value": "value-0"
+					},
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "Medium",
+							"emoji": true
+						},
+						"value": "value-1"
+					},
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "Hard",
+							"emoji": true
+						},
+						"value": "value-2"
+					}
+				],
+				"action_id": "radio_buttons-action"
+			}
+		},
+		{
+			"type": "divider"
+		},
+		{
+			"type": "section",
+			"block_id":"add_dinner_time",
+			"text": {
+				"type": "mrkdwn",
+				"text": "Prep and Cooking Time Requirments:"
+			},
+			"accessory": {
+				"type": "radio_buttons",
+				"options": [
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "under 30 min",
+							"emoji": true
+						},
+						"value": "value-0"
+					},
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "30 min - 1 hour",
+							"emoji": true
+						},
+						"value": "value-0"
+					},
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "1-2 hours",
+							"emoji": true
+						},
+						"value": "value-1"
+					},
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "2+ hours",
+							"emoji": true
+						},
+						"value": "value-2"
+					}
+				],
+				"action_id": "radio_buttons-action"
+			}
+		},
+        {
+			"type": "divider"
+		},
+        {
+			"type": "input",
+			"block_id":"add_dinner_tags",
+			"optional": true,
+			"element": {
+				"type": "plain_text_input",
+				"action_id": "tags",
+				"min_length":0,
+                "placeholder": {
+                    "type": "plain_text",
+                    "text": "Spicy, Kids hate it, Strong Flavor, Rotten cabbage"
+                    }
+			},
+			"label": {
+				"type": "plain_text",
+				"text": "Tags - comma seperated",
+				"emoji": true
+			}
+		}
+	]
+}
