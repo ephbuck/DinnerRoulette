@@ -62,7 +62,7 @@ def recieve_slack_data():
 
 #  main thread of execution to start the server
 if __name__=='__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0')
 
 """ EXAMPLE RETURNS:
 RECIEVE FROM COMMAND /DINNER_ADD:
